@@ -7,7 +7,7 @@ import jsonpath
 from seleniumwire.utils import decode
 import sys
 from selenium.webdriver.edge.service import Service
-from selenium.webdriver.edge.options import Options
+
 
 
 
@@ -19,7 +19,7 @@ while True:
         pass_word = input("===输入登录密码：")
         print("===开始尝试登录，请手动通过图形验证码和手机验证===")
         time.sleep(2)
-        service = Service(executable_path=r'D:\Python\MicrosoftWebDriver.exe')  # 修改为您的实际路径
+        service = Service(executable_path=r'MicrosoftWebDriver.exe')  # 修改为您的实际路径
         driver1 = webdriver.Edge(service=service)
         driver1.implicitly_wait(5)
         url_login = "https://account.bilibili.com/login"
